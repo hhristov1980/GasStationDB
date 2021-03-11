@@ -20,14 +20,15 @@ public class StatisticsToFiles extends Thread{
 
     @Override
     public void run() {
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        while (true) {
+            try {
+                Thread.sleep(30000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            printStatToTXT();
+            printStatToJSON();
         }
-        printStatToTXT();
-        printStatToJSON();
-
     }
 
     private void printStatToTXT(){

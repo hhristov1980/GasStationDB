@@ -21,7 +21,7 @@ public class Demo {
             gasStation.addCashier(new Cashier(gasStation));
             gasStation.addCashDesk(new CashDesk(gasStation));
         }
-        for(int i = 0; i<20; i++){
+        for(int i = 0; i<100; i++){
             Car.FuelType fuelType = Car.FuelType.values()[Randomizer.getRandomInt(0,Car.FuelType.values().length-1)];
             Car car = new Car("Car "+(i+1),fuelType,gasStation);
             car.start();
